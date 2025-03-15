@@ -2,6 +2,8 @@
 
 This Python application provides a graphical interface to control the media playback and volume of an Android device using `scrcpy` over a local network.
 
+![demo](assets/controllerdemo.gif)
+
 ## Features
 
 * **Remote Media Control:** Play/pause, stop, next track, and previous track.
@@ -11,6 +13,7 @@ This Python application provides a graphical interface to control the media play
 * **Debug Output:** A text area displays debug information.
 * **Autoconnect:** Option to automatically connect to a previously used IP address.
 * **IP Address Persistence:** Saves the IP address for autoconnect in a file.
+
 
 ## Prerequisites
 

@@ -5,6 +5,10 @@ from tkinter import ttk
 import time
 import os
 
+# Calculate script_dir and config_path at the module level
+script_dir = os.path.dirname(os.path.abspath(__file__))
+config_path = os.path.join(script_dir, "..", "config", "autoconnect.txt")
+
 class ScrcpyMediaController:
     def __init__(self, master):
         self.master = master
@@ -65,7 +69,7 @@ class ScrcpyMediaController:
 
     def load_autoconnect_ip(self):
         try:
-            with open("autoconnect.txt", "r") as f:
+            with open(config_path, "r") as f:
                 ip = f.read().strip()
                 if ip:
                     self.ip_entry.insert(0, ip)
@@ -79,11 +83,11 @@ class ScrcpyMediaController:
 
     def save_autoconnect_ip(self):
         if self.autoconnect_var.get():
-            with open("autoconnect.txt", "w") as f:
+            with open(config_path, "w") as f:
                 f.write(self.ip_entry.get())
         else:
             try:
-                os.remove("autoconnect.txt")
+                os.remove(config_path)
             except FileNotFoundError:
                 pass
 
