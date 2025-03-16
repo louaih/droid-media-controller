@@ -52,6 +52,7 @@ This Python application provides a graphical interface to control the media play
 
 5.  **Enable ADB over TCP/IP:**
     * Connect your Android device to your computer via USB.
+    * If prompted, press "Allow" on your Android device
     * Open a terminal and run `adb tcpip 5555`.
     * Disconnect your Android device from the USB cable.
     * Find your Android device's IP address (Settings > About phone > Status > IP address).
@@ -79,8 +80,8 @@ This Python application provides a graphical interface to control the media play
 
 ## Notes
 
-* The `autoconnect.txt` file will be created in the same directory as the script.
+
 * The volume step counts in the code might need to be adjusted based on your Android device's volume levels.
 * Ensure your Android device and computer are on the same local network.
 * If the IP address of the android device changes, you will need to reconnect.
-* For best performance, use a 5 GHz Wi-Fi network.# droid-media-controller
+* For best performance, use a 5 GHz Wi-Fi network.
